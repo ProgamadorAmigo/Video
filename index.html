@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>VideoControler</title>
+
+        <style>
+
+            .container{
+                position: relative;
+                width: 640px;
+                height: 360px;
+            }
+
+            .video{
+                width: 100%;
+            }
+
+            .controle{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                opacity: 0;
+                transition: all 200ms ease;
+            }
+
+            .controle:hover{
+                opacity: 80%;
+            }
+
+            .bt{
+                position: relative;
+                width: 60px;
+                padding: 10px;
+                top: 100%;
+                transform: translateY(-100%);
+                
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+
+        <div class="container">
+
+            <video class="video" id="video1" src="./images/production ID_4088836.mp4"></video>
+
+            <div class="controle">
+
+            <img class="bt" onclick="diminuirVel()" src="./images/chevron-left.svg">
+            <img class="bt" onclick="retroceder()" src="./images/rotate-ccw.svg">
+            <img class="bt" onclick="stop()" src="./images/pause.svg">
+            <img class="bt" onclick="play()" src="./images/play.svg">
+            <img class="bt" onclick="avancar()" src="./images/rotate-cw.svg">
+            <img class="bt" onclick="almentarVel()" src="./images/chevron-right.svg">
+
+            </div>
+
+        </div>
+
+        <script src="./script-1.js"></script>
+
+    </body>
+
+</html>
